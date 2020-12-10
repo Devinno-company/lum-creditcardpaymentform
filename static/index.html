@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/file?path=/css/styles.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" id="paymentForm" target="_blank">
+        <div style="display: none">
+            <div>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text"></select>
+            </div>
+            <div>
+                <label for="docType">Tipo de documento</label>
+                <select id="docType" name="docType" data-checkout="docType" type="text"></select>
+            </div>
+            <div>
+                <label for="docNumber">Número do documento</label>
+                <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" />
+            </div>
+        </div>
+        <h3>Dados do cartão</h3>
+        <div>
+            <div class="input-data">
+                <input type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false"
+                    onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false"
+                    ondrop="return false" autocomplete=off value="5031433215406351" required>
+                <label for="cardNumber">Número do cartão</label>
+            </div>
+            <div class="input-data">
+                <input id="cardholderName" data-checkout="cardholderName" type="text" required>
+                <label for="cardholderName">Nome impresso no cartão</label>
+            </div>
+            
+            <div>
+                <div class="data">
+                    <div class="input-data">
+                        <input type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
+                            onselectstart="return false" onpaste="return false" oncopy="return false"
+                            oncut="return false" ondrag="return false" ondrop="return false" autocomplete=off value="11"
+                            required>
+                        <label>Mês de vencimento</label>
+                    </div>
+                    <div class="input-data year">
+                        <input type="text" placeholder="YY" id="cardExpirationYear" data-checkout="cardExpirationYear"
+                            onselectstart="return false" onpaste="return false" oncopy="return false"
+                            oncut="return false" ondrag="return false" ondrop="return false" autocomplete=off value="25"
+                            required>
+                        <label>Ano de vencimento</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-data">
+                <input id="securityCode" data-checkout="securityCode" type="text" onselectstart="return false"
+                    onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false"
+                    ondrop="return false" autocomplete=off value="123" required>
+                <label for="securityCode">CVV (Código de segurança)</label>
+
+            </div>
+            <div style="display:none" class="input-data" id="issuerInput">
+                <label for="issuer">Banco emissor</label>
+                <select id="issuer" name="issuer" data-checkout="issuer"></select>
+            </div>
+            <div style="display:none" class="input-data">
+                <label for="installments">Parcelas</label>
+                <select type="text" id="installments" name="installments"></select>
+            </div>
+            <div>
+                <input type="hidden" name="transactionAmount" id="transactionAmount" value="100" />
+                <input type="hidden" name="paymentMethodId" id="paymentMethodId" />
+                <input type="hidden" name="description" id="description" />
+                <div class="btnContainer">
+                    <button class="btn" type="submit" taget="_blank">Finalizar pagamento</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <script src="/file?path=/script/script.js"></script>
+</body>
+
+</html>

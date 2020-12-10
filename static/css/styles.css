@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html { 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center    
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10vh
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #052377;
+    margin-top: 4vh;
+    width: 100%;
+    height: 5vh;
+    position: relative;
+}
+
+.input-data label {
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #052377;
+    font-size: 10px;
+    position: absolute;
+    left: 10vw;
+    margin-top: 6vh;
+    transition: all .3s ease;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+}
+
+.data .input-data input {
+    width: 38vw;
+}
+
+.data .input-data label {
+    margin-top: 6vh;
+}
+
+.data .input-data.year label {
+    margin-left: 42vw;
+}
+
+.data .input-data.year input {
+    margin-left: 4vw;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+    transform: translateY(-25px);
+}
+
+.btnContainer {
+    position: absolute;
+    width: 100vw;
+    height: 8vh;
+    left: 0;
+    top: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px #000
+}
+
+.btn {
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFF;
+    background-image: linear-gradient(to right,#052377, #2B8AFC);
+    border-radius: 10px;
+    padding: .5rem;
+    width: 80vw;
+    border: 0;
+}
